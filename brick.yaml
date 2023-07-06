@@ -1,4 +1,4 @@
-name: brick_entity
+name: feature
 description: A new brick created with the Mason CLI.
 
 # The following defines the brick repository url.
@@ -28,9 +28,9 @@ environment:
 vars:
   feature_name:
     type: string
-    description: Entity Name?
-    default: Entity
-    prompt: Entity Name?
+    description: Feature Name?
+    default: Feature
+    prompt: feature Name?
   generate_model:
     type: boolean
     description: generate model if yes
