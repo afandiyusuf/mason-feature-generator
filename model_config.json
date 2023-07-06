@@ -1,0 +1,67 @@
+{
+  "properties": [
+    {
+      "name": "id",
+      "jsonProperty": "id",
+      "type": "string",
+      "ignore": false,
+      "required": true
+    },
+    {
+      "name": "description",
+      "jsonProperty": "name",
+      "type": "String",
+      "ignore": false,
+      "required": true
+    },
+    {
+      "name": "creatorName",
+      "jsonProperty": "creator-name",
+      "type": "String",
+      "ignore": false,
+      "required": true
+    },
+    {
+      "name": "creatorId",
+      "jsonProperty": "creator-id",
+      "type": "String?",
+      "ignore": false,
+      "required": false
+    },
+    {
+      "name": "selected",
+      "jsonProperty": "selected",
+      "type": "Bool",
+      "ignore": true,
+      "required": true
+    }
+  ],
+  "have_create": true,
+  "create_param": [
+    {
+      "name": "id",
+      "type": "String",
+      "required": true
+    },
+    {
+      "name": "creatorId",
+      "type": "String",
+      "required": false
+    }
+  ],
+  "have_delete": false,
+  "have_get_all": false,
+  "have_update": true,
+  "update_param": [
+    {
+      "name": "id",
+      "type": "String",
+      "required": true
+    },
+    {
+      "name": "creatorId",
+      "type": "String",
+      "required": false
+    }
+  ]
+}

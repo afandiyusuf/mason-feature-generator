@@ -1,0 +1,25 @@
+import 'package:dart_json_mapper/dart_json_mapper.dart';
+import 'package:dart_json_mapper_flutter/dart_json_mapper_flutter.dart';
+import 'package:flutter_test/flutter_test.dart';
+import '../../../../../lib/features/{{feature_name}}/domain/entity/{{feature_name}}.dart';
+import '{{feature_name}}_test.reflectable.dart';
+import 'package:user_management/main.mapper.g.dart';
+
+void main() {
+  late String responseFromServer;
+  setUp(() {
+    initializeReflectable();
+    initializeJsonMapper(adapters: [flutterAdapter]);
+    setupAdapter();
+    //TODO:define response from server json
+    responseFromServer = 
+  });
+
+  test("Test parse {{feature_name}}", () {
+    var data = JsonMapper.deserialize<List<{{feature_name.pascalCase()}}>>(responseFromServer);
+    expect(data != null, true);
+    expect(data![0], isA<{{feature_name.pascalCase()}}>());
+  });
+}
+
+
