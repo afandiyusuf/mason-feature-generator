@@ -10,17 +10,17 @@ class Delete{{feature_name.pascalCase()}}UseCase extends UseCase<bool, Delete{{f
 
   @override
   Future<Either<Failure, bool>> call(Delete{{feature_name.pascalCase()}}Param params) async {
-    return repository.delete{{feature_name.pascalCase()}}({{#have_delete}}{ {{/have_delete}}{{^have_delete}}){{/have_delete}}
+    return repository.delete{{feature_name.pascalCase()}}(
         {{#delete_param}}{{name}}:params.{{name}},{{/delete_param}}
-      {{#have_delete}} }){{/have_delete}}
+      );
   }
 }
 
 class Delete{{feature_name.pascalCase()}}Param extends Param {
 {{#have_delete}}{{#delete_param}}
-  {{type}}{{^required}}?{{/required}} {{name}};{{/delete_param}}
+  {{{type}}}{{^required}}?{{/required}} {{name}};{{/delete_param}}
   Delete{{feature_name.pascalCase()}}Param({{#have_delete}}{ {{/have_delete}}{{^have_delete}}){{/have_delete}}
-    {{#delete_param}}{{#required}}required{{/required}} {{type}}{{^required}}?{{/required}} this.{{name}},{{/delete_param}}
-  {{#have_delete}} }){{/have_delete}}
+    {{#delete_param}}{{#required}}required{{/required}} {{{type}}}{{^required}}?{{/required}} this.{{name}},{{/delete_param}}
+  {{#have_delete}} });{{/have_delete}}
 {{/have_delete}}
 }

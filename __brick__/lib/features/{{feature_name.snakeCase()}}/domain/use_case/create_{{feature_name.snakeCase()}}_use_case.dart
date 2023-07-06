@@ -10,17 +10,17 @@ class Create{{feature_name.pascalCase()}}UseCase extends UseCase<bool, Create{{f
 
   @override
   Future<Either<Failure, bool>> call(Create{{feature_name.pascalCase()}}Param params) async {
-    return repository.create{{feature_name.pascalCase()}}({{#have_create}}{ {{/have_create}}{{^have_create}}){{/have_create}}
+    return repository.create{{feature_name.pascalCase()}}(
         {{#create_param}}{{name}}:params.{{name}},{{/create_param}}
-      {{#have_create}} }){{/have_create}};
+      );
   }
 }
-$
+
 class Create{{feature_name.pascalCase()}}Param extends Param {
 {{#have_create}}{{#create_param}}
-  {{type}}{{^required}}?{{/required}} {{name}};{{/create_param}}
+  {{{type}}}{{^required}}?{{/required}} {{name}};{{/create_param}}
   Create{{feature_name.pascalCase()}}Param({{#have_create}}{ {{/have_create}}{{^have_create}}){{/have_create}}
-    {{#create_param}}{{#required}}required{{/required}} {{type}}{{^required}}?{{/required}} this.{{name}},{{/create_param}}
-  {{#have_create}} }){{/have_create}}
+    {{#create_param}}{{#required}}required{{/required}} {{{type}}}{{^required}}?{{/required}} this.{{name}},{{/create_param}}
+  {{#have_create}} });{{/have_create}}
 {{/have_create}}
 }
