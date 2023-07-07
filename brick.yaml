@@ -26,11 +26,6 @@ environment:
 #  * a list of values (enums only)
 #  * an optional separator (list only)
 vars:
-  feature_name:
-    type: string
-    description: Entity Name?
-    default: Entity
-    prompt: Entity Name?
   generate_model:
     type: boolean
     description: generate model if yes

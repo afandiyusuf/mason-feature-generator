@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:user_management/features/{{feature_name.snake_casee()}}/domain/repository/{{feature_name.snake_casee()}}_repository.dart';
+import '../../../../../lib/features/{{feature_name.snake_casee()}}/domain/repository/{{feature_name.snake_casee()}}_repository.dart';
 import '../../../../../lib/features/{{feature_name.snake_casee()}}/domain/use_case/delete_{{feature_name.snake_casee()}}_use_case.dart';
 
 import 'delete_{{feature_name.snake_casee()}}_use_case.mocks.dart';
