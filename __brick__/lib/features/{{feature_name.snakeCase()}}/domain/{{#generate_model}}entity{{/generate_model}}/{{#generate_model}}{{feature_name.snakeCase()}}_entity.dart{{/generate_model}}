@@ -4,10 +4,10 @@ import 'package:dart_json_mapper/dart_json_mapper.dart';
 class {{feature_name.pascalCase()}}Entity {
   {{#properties}}
   {{^ignore}}@JsonProperty(name:"{{jsonProperty}}"){{/ignore}}{{#ignore}}@JsonProperty(ignore:true){{/ignore}}
-  String {{name}};
+  String{{^required}}?{{/required}} {{name}};
   {{/properties}}
 
-  {{feature_name.pascalCase()}}(
+  {{feature_name.pascalCase()}}Entity({{#have_properties}}{ {{/have_properties}}
   {{#properties}}{{#required}} required {{/required}}this.{{name}},
-  {{/properties}});
+  {{/properties}} {{#have_properties}} }{{/have_properties}});
 }
