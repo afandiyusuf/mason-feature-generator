@@ -22,7 +22,8 @@ class {{feature_name.pascalCase()}}RepositoryImpl implements {{feature_name.pasc
       return Left(ServerFailure("$e"));
     }
   }
-
+  
+  @override
   Future<Either<Failure, bool>> create{{feature_name.pascalCase()}}({{#have_create}}{ {{/have_create}}{{^have_create}}){{/have_create}}
       {{#create_param}}{{#required}}required{{/required}} {{{type}}}{{^required}}?{{/required}} {{name}},{{/create_param}}
     {{#have_create}} }){{/have_create}} async {
