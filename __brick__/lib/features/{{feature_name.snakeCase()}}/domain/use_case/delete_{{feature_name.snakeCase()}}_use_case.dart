@@ -1,7 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:user_management/core/error/failures.dart';
-import 'package:user_management/core/usecase.dart';
-import 'package:user_management/features/{{feature_name.snakeCase()}}/domain/repository/{{feature_name.snakeCase()}}_repository.dart';
+
+import '../../../../core/error/failures.dart';
+import '../../../../core/usecase.dart';
+import '../repository/{{feature_name.snakeCase()}}_repository.dart';
 
 class Delete{{feature_name.pascalCase()}}UseCase extends UseCase<bool, Delete{{feature_name.pascalCase()}}Param> {
   {{feature_name.pascalCase()}}Repository repository;

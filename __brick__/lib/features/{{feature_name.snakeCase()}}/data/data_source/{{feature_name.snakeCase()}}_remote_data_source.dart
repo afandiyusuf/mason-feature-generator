@@ -10,7 +10,7 @@ abstract class {{feature_name.pascalCase()}}RemoteDataSource {
     {{#have_create}} });{{/have_create}}
 
   Future<bool> delete{{feature_name.pascalCase()}}({{#have_delete}}{ {{/have_delete}}{{^have_delete}});{{/have_delete}}
-      {{#have_create}}{{#delete_param}}{{#required}}required{{/required}} {{{type}}}{{^required}}?{{/required}} {{name}},{{/delete_param}}
+      {{#delete_param}}{{#required}}required{{/required}} {{{type}}}{{^required}}?{{/required}} {{name}},{{/delete_param}}
     {{#have_delete}} });{{/have_delete}}
 
   Future<bool> update{{feature_name.pascalCase()}}({{#have_update}}{ {{/have_update}}{{^have_update}});{{/have_update}}
