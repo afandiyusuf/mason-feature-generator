@@ -11,7 +11,7 @@ class {{feature_name.pascalCase()}}RepositoryImpl implements {{feature_name.pasc
 
   @override
   Future<Either<Failure, List<{{feature_name.pascalCase()}}Entity>>> getAll{{feature_name.pascalCase()}}({{#have_get_all}}{ {{/have_get_all}}{{^have_get_all}}){{/have_get_all}}
-      {{#get_all_param}}{{#required}}required{{/required}} {{{{type}}}{{^required}}?{{/required}} {{name}},{{/get_all_param}}
+      {{#get_all_param}}{{#required}}required{{/required}} {{{type}}}{{^required}}?{{/required}} {{name}},{{/get_all_param}}
     {{#have_get_all}} }){{/have_get_all}} async {
     try {
       var data = await remoteDataSource.getAll{{feature_name.pascalCase()}}({{^have_get_all}});{{/have_get_all}}
